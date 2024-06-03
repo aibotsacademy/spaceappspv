@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,110 +26,33 @@
     <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox-theme.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+  
+   <script src="js/modernizr.custom.js"></script>
+  
+    <style>
+        /* Ensure the section takes up full width and height of the viewport */
+        #header {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-
-    <script src="js/modernizr.custom.js"></script>
-
+        /* Ensure the spline viewer is responsive */
+        spline-viewer {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            border: none; /* Remove border if any */
+        }
+    </style>
 </head>
-
 <body>
-    <!-- HHHHHHHHHHHHHHHHHH        Preloader          HHHHHHHHHHHHHHHH -->
-
-    <!-- <div id="preloader"></div> -->
-    <!-- HHHHHHHHHHHHHHHHHH        Header          HHHHHHHHHHHHHHHH -->
-
     <section id="header" class="header">
-       
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.4.9/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/VCVqVuYj2JW1KM4N/scene.splinecode"></spline-viewer>
-
-
-
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.4.9/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/VCVqVuYj2JW1KM4N/scene.splinecode"></spline-viewer>
     </section>
-    <!-- /#header -->
-
-   
-    <!-- HHHHHHHHHHHHHHHHHH        Footer          HHHHHHHHHHHHHHHH -->
-
-
-
-
-    
-    
-
-
-    <!-- HHHHHHHHHHHHHHHHHH        Open/Close          HHHHHHHHHHHHHHHH -->
-    <div class="overlay overlay-hugeinc">
-        <button type="button" class="overlay-close">Close</button>
-        <nav>
-        <ul>
-            <li class="hideit"><a href="#header">Home</a></li>
-            <li class="hideit"><a href="#bigfeatures">Feature</a></li>
-            <li class="hideit"><a href="#speciality">Speciality</a></li>
-            <li class="hideit"><a href="#gallery">Gallery</a></li>
-            <li class="hideit"><a href="#testimonial">Testimonial</a></li>
-            <!-- <li class="hideit"><a href="#team">Team</a></li> -->
-            <li class="hideit"><a href="#contact">Contact Us</a></li>
-        </ul>
-        </nav>
-    </div>
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/nivo-lightbox.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <!--<script src="js/jquery.ajaxchimp.min.js"></script>-->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <script>
-        $(document).ready(function(){
-            $(".hideit").click(function(){
-                $(".overlay").hide();
-            });
-            $("#trigger-overlay").click(function(){
-                $(".overlay").show();
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-
-          var kawa = $('.top-bar');
-          var back = $('#back-to-top');
-          function scroll() {
-             if ($(window).scrollTop() > 700) {
-                kawa.addClass('fixed');
-                back.addClass('show-top');
-
-             } else {
-                kawa.removeClass('fixed');
-                back.removeClass('show-top');
-             }
-          }
-
-          document.onscroll = scroll;
-        });
-    </script>
-    <!--HHHHHHHHHHHH        Smooth Scrooling     HHHHHHHHHHHHHHHH-->
-    <script>
-        $(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-    </script>
 </body>
 </html>
